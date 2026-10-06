@@ -10,7 +10,12 @@
       #unity-canvas { width: 100%; height: 100%; display: block; background: #0a0806; outline: none; }
       #loading {
         position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center;
-        background: radial-gradient(ellipse at center, #1c1712 0%, #0a0806 70%);
+        /* Cut stone under a pool of light, like the game's windows (v0.32). */
+        background:
+          radial-gradient(ellipse at center, rgba(40, 32, 22, 0.35) 0%, rgba(10, 8, 6, 0.96) 72%),
+          repeating-linear-gradient(0deg, #0e0c0a 0 3px, transparent 3px 44px),
+          repeating-linear-gradient(90deg, #0e0c0a 0 3px, transparent 3px 88px),
+          linear-gradient(#26211c, #1b1814);
         font-family: Georgia, "Times New Roman", serif; color: #e4c070; text-align: center;
       }
       #title { font-size: clamp(42px, 8vw, 96px); letter-spacing: 0.12em; text-shadow: 0 0 18px rgba(228, 192, 112, 0.35), 0 3px 0 #3d2c10; }
@@ -19,6 +24,8 @@
              border: 2px solid #6d645a; border-bottom-color: #16130f; border-right-color: #16130f; box-shadow: 0 0 0 2px #0a0806, 0 0 0 3px #b8913c; }
       #fill { height: 100%; width: 0%; background: linear-gradient(#f0d070, #b8913c 60%, #6e5420); transition: width 0.2s; }
       #status { margin-top: 14px; font-size: 14px; color: #8a7d6a; letter-spacing: 0.1em; }
+      #keys { margin-top: 26px; font-size: 13px; color: #a8987c; letter-spacing: 0.12em; line-height: 1.9; max-width: 90vw; }
+      #keys b { color: #e4c070; font-weight: normal; padding: 1px 6px; border: 1px solid #6d645a; background: #2f2a25; margin: 0 2px; }
       #verse { position: absolute; bottom: 28px; font-size: 13px; color: #6e6452; letter-spacing: 0.08em; padding: 0 16px; }
       #fullscreen { position: fixed; right: 12px; top: 10px; padding: 6px 10px; font: 12px Georgia, serif; color: #e4c070;
                     background: #2f2a25; border: 2px solid #6d645a; border-bottom-color: #16130f; border-right-color: #16130f;
@@ -35,6 +42,7 @@
       <div id="subtitle">THE HERALDS</div>
       <div id="bar"><div id="fill"></div></div>
       <div id="status">Loading...</div>
+      <div id="keys"><b>WASD</b> MOVE &nbsp; YOUR WEAPONS STRIKE ON THEIR OWN &nbsp; <b>SPACE</b> DASH<br><b>ESC</b> MENU &nbsp; <b>M</b> MAP &nbsp; <b>C</b> HERALD &nbsp; <b>I</b> ITEMS &nbsp; <b>B</b> WEAPONS &nbsp; <b>1</b> <b>2</b> BREAD</div>
       <div id="verse">"Your kingdom come, your will be done, on earth as it is in heaven." (Matthew 6:10)</div>
     </div>
     <div id="fullscreen" title="Fullscreen">FULLSCREEN</div>
@@ -58,7 +66,7 @@
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Peyton Parrish Games",
         productName: "Yeshua",
-        productVersion: "0.31.0",
+        productVersion: "0.32.0",
         showBanner: unityShowBanner,
       };
       // Saves (the treasury, hero, chests) persist in the browser between visits.
