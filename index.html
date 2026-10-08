@@ -60,19 +60,19 @@
       var buildUrl = "Build";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/61b49b9190eceb2a7ea842a0cd0a8b44.data.unityweb",
+        dataUrl: buildUrl + "/16cfed0f3e43f64176ca7bcf63ac1d95.data.unityweb",
         frameworkUrl: buildUrl + "/cd9899156a9932b202cd2e8ce3605418.framework.js.unityweb",
-        codeUrl: buildUrl + "/ff8ce863bd496936695a8ba4bfbfd45d.wasm.unityweb",
+        codeUrl: buildUrl + "/d87a92f6c85d2afce014d067c2b1820c.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Peyton Parrish Games",
         productName: "Yeshua",
-        productVersion: "0.83.0",
+        productVersion: "0.84.0",
         showBanner: unityShowBanner,
       };
       // Saves (the treasury, hero, chests) persist in the browser between visits.
       config.autoSyncPersistentDataPath = true;
       var script = document.createElement("script");
-      script.src = buildUrl + "/3da7cb3a7eca1e2bca66b8f520640343.loader.js";
+      script.src = buildUrl + "/5043f1df12781a803ffbf22e610745fb.loader.js";
       script.onload = function () {
         createUnityInstance(canvas, config, function (progress) {
           document.querySelector("#fill").style.width = Math.round(100 * progress) + "%";
