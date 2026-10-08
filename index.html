@@ -42,7 +42,7 @@
       <div id="subtitle">THE HERALDS</div>
       <div id="bar"><div id="fill"></div></div>
       <div id="status">Loading...</div>
-      <div id="keys"><b>WASD</b> MOVE &nbsp; YOUR WEAPONS STRIKE ON THEIR OWN &nbsp; <b>SPACE</b> DASH<br><b>ESC</b> MENU &nbsp; <b>M</b> MAP &nbsp; <b>C</b> HERALD &nbsp; <b>I</b> ITEMS &nbsp; <b>B</b> WEAPONS &nbsp; <b>1</b> <b>2</b> BREAD</div>
+      <div id="keys"><b>WASD</b> MOVE &nbsp; <b>CLICK</b> STRIKE &nbsp; <b>Q</b> CHARGE &nbsp; <b>V</b> JUMP &nbsp; <b>SPACE</b> DASH &nbsp; <b>F</b> SPIRIT OF MIGHT<br>PAD: <b>X</b> STRIKE &nbsp; <b>Y</b> CHARGE &nbsp; <b>A</b> JUMP &nbsp; <b>B</b> DASH &nbsp; <b>RB</b> SPIRIT<br><b>ESC</b> MENU &nbsp; <b>M</b> MAP &nbsp; <b>C</b> HERALD &nbsp; <b>I</b> ITEMS &nbsp; <b>B</b> WEAPONS &nbsp; <b>J</b> QUESTS &nbsp; <b>1</b> <b>2</b> BREAD</div>
       <div id="verse">"Your kingdom come, your will be done, on earth as it is in heaven." (Matthew 6:10)</div>
     </div>
     <div id="fullscreen" title="Fullscreen">FULLSCREEN</div>
@@ -60,19 +60,19 @@
       var buildUrl = "Build";
       var config = {
         arguments: [],
-        dataUrl: buildUrl + "/WebGL.data.unityweb",
-        frameworkUrl: buildUrl + "/WebGL.framework.js.unityweb",
-        codeUrl: buildUrl + "/WebGL.wasm.unityweb",
+        dataUrl: buildUrl + "/61b49b9190eceb2a7ea842a0cd0a8b44.data.unityweb",
+        frameworkUrl: buildUrl + "/cd9899156a9932b202cd2e8ce3605418.framework.js.unityweb",
+        codeUrl: buildUrl + "/ff8ce863bd496936695a8ba4bfbfd45d.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "Peyton Parrish Games",
         productName: "Yeshua",
-        productVersion: "0.82.1",
+        productVersion: "0.83.0",
         showBanner: unityShowBanner,
       };
       // Saves (the treasury, hero, chests) persist in the browser between visits.
       config.autoSyncPersistentDataPath = true;
       var script = document.createElement("script");
-      script.src = buildUrl + "/WebGL.loader.js";
+      script.src = buildUrl + "/3da7cb3a7eca1e2bca66b8f520640343.loader.js";
       script.onload = function () {
         createUnityInstance(canvas, config, function (progress) {
           document.querySelector("#fill").style.width = Math.round(100 * progress) + "%";
